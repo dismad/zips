@@ -1,3 +1,4 @@
+```
 ZIP: Unassigned
 Title: Dev Fund Soft Landing
 Owners: dismad <dismad@zechub.social>
@@ -7,7 +8,7 @@ Created: 2026-10-26
 License: MIT
 Discussions-To: <https://forum.zcashcommunity.com/t/dev-fund-proposal-soft-landing-taper-the-current-funding-streams-at-future-halvings/XXXXX>
 Pull-Request: <https://github.com/zcash/zips/pull/XXXX>
-
+```
 
 # Terminology
 
@@ -32,20 +33,20 @@ The schedule is:
 
 # Motivation
 
-ZIP 1016 established an 8% ZCG stream and a 12% Coinholder-Controlled Fund stream that run until the third halving. Without a successor, those streams end and 100% of the block subsidy returns to miners.
+ZIP 1016 established an 8% ZCG stream and a 12% Coinholder-Controlled Fund stream that run until the third half. Without a successor, those streams end and 100% of the block subsidy returns to miners.
 
 This ZIP provides a minimal, deterministic taper that:
 
 - Continues the existing mechanisms at reduced intake levels.
 - Gives the ecosystem a multi-year wind-down period.
-- Removes the open-ended 20% commitment after a defined number of halvings.
+- Removes the open-ended 20% commitment after a defined number of halves.
 - Requires no new governance rules, voting processes, or Key-Holder obligations.
 
 # Requirements
 
 - The ZCG and Coinholder-Controlled Fund mechanisms defined by ZIP 1016 and ZIP 271 MUST continue to operate unchanged except for the reduced funding-stream percentages specified in this ZIP.
 - The 2:3 ratio between the ZCG stream and the Coinholder-Controlled Fund stream MUST be preserved in every period.
-- All height boundaries MUST be expressed relative to the actual halving heights (including any NU7 spacing adjustment from ZIP 218).
+- All height boundaries MUST be expressed relative to the actual half heights (including any NU7 spacing adjustment from ZIP 218).
 - No new consensus rules beyond the funding-stream percentages are required.
 
 # Non-requirements
@@ -58,7 +59,7 @@ This ZIP provides a minimal, deterministic taper that:
 
 The funding streams defined by ZIP 214 Revision 3 [6] and extended by ZIP 1016 are modified as follows.
 
-Let \( H_3 \) be the third-halving height, \( H_4 \) the fourth-halving height, and \( H_5 \) the fifth-halving height, each computed according to the protocol (including ZIP 218 if applicable).
+Let \( H_3 \) be the third-half height, \( H_4 \) the fourth-half height, and \( H_5 \) the fifth-half height, each computed according to the protocol (including ZIP 218 if applicable).
 
 | Stream | Numerator | Denominator | Start height | End height |
 | --- | --- | --- | --- | --- |
@@ -75,15 +76,15 @@ All other rules of ZIP 1016 (voting, review period, 420 000 ZEC threshold, simpl
 
 # Rationale
 
-Stepping the percentages down at the known halving heights is the smallest consensus change that produces a predictable reduction. It reuses the existing ZIP 214 funding-stream table format and requires no new opcodes, voting mechanisms, or governance processes.
+Stepping the percentages down at the known half heights is the smallest consensus change that produces a predictable reduction. It reuses the existing ZIP 214 funding-stream table format and requires no new opcodes, voting mechanisms, or governance processes.
 
 Preserving the 2:3 ratio ensures that both the community-grant and coinholder-grant pathways scale down together.
 
-Expressing boundaries as relative heights avoids hard-coding constants that would become incorrect if the NU7 spacing adjustment changes the exact third-halving height.
+Expressing boundaries as relative heights avoids hard-coding constants that would become incorrect if the NU7 spacing adjustment changes the exact third-half height.
 
 # Deployment
 
-This ZIP is intended to be deployed so that the first step-down (from 8%/12% to 4%/6%) takes effect at the third-halving height. Exact activation height and network-upgrade coordination are left to the ZIP that defines the corresponding Network Upgrade.
+This ZIP is intended to be deployed so that the first step-down (from 8%/12% to 4%/6%) takes effect at the third-half height. Exact activation height and network-upgrade coordination are left to the ZIP that defines the corresponding Network Upgrade.
 
 # Open issues
 
