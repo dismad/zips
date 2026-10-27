@@ -6,7 +6,7 @@ Status: Draft
 Category: Consensus / Process
 Created: 2026-10-26
 License: MIT
-Discussions-To: <https://forum.zcashcommunity.com/t/dev-fund-proposal-soft-landing-taper-the-current-funding-streams-at-future-halvings/XXXXX>
+Discussions-To: <https://forum.zcashcommunity.com/t/draft-zip-dev-fund-soft-landing/58519>
 Pull-Request: <https://github.com/zcash/zips/pull/XXXX>
 ```
 
